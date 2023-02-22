@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Strength Checker</title>
+    <script type="text/javascript" src="assets/zxcvbn.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script type="text/javascript" src="assets/checkpw.js"></script>
+  </head>
+  <body>
+    <img width="10%" src="assets/password-svgrepo-com.svg" class="center"/>
+    <h1>Password Strength Checker</h1>
+    <<form onsubmit="checkPassword(); return false;">
+      <label for="password-input">Enter your password:</label>
+      <input type="password" id="password-input">
+      <div class="password-strength" id="password-strength"></div>
+      <div class="password-crack-time" id="password-crack-time"></div>
+      <div class="password-guesses" id="password-guesses"></div>
+      <div class="password-feedback" id="password-feedback"></div>
+      <label for="score-meter" style="display: none;">Password strength:</label>
+      <meter id="score-meter" min="0" max="100" value="0" style="display: none;"></meter>
+
+      <button type="button" onclick="checkPassword()">Check Password</button>
+    </form>
+    <hr>
+    <footer> by Noveck J. Gowandan X ChatGPT (2023). <br> Uses the <a href="https://github.com/dropbox/zxcvbn">zxcvbn</a> estimation algorithm as the backend. </footer>
+  </body>
+</html>
